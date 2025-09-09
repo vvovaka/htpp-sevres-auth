@@ -84,6 +84,6 @@ app.post("/admin/add", async (req, res) => {
 });
 
 
-app.listen(8888, "localhost", () => {
+app.listen(8888, "10.0.2.15", () => {
   console.log("Сайт работает на http://10.0.2.15:8888");
 });
