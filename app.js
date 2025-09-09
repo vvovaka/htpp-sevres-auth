@@ -22,13 +22,7 @@ function writeJson(data) {
 }
 
 // Главная
-app.get("/", (req, res) => {
-  res.send(`
-    <h1>Главная</h1>
-    <p><a href="/admin">Регистрация(password VeImPl12321)</a></p>
-    <p><a href="/users">Список игроков</a></p>
-  `);
-});
+app.use("/", express.static("website/main/"))
 
 
 // Список игроков
@@ -90,6 +84,6 @@ app.post("/admin/add", async (req, res) => {
 });
 
 
-app.listen(8888, "10.0.2.15", () => {
-  console.log("Сайт работает на http://10.0.2.15:3000");
+app.listen(8888, "localhost", () => {
+  console.log("Сайт работает на http://10.0.2.15:8888");
 });

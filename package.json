@@ -1,0 +1,25 @@
+{
+  "name": "htpp-sevres-auth",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/vvovaka/htpp-sevres-auth#readme",
+  "bugs": {
+    "url": "https://github.com/vvovaka/htpp-sevres-auth/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvovaka/htpp-sevres-auth.git"
+  },
+  "license": "ISC",
+  "author": "VoViNdOs",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "uuid": "^13.0.0"
+  }
+}
