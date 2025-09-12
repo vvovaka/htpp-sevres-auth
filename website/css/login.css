@@ -1,0 +1,82 @@
+.main {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 32px;
+
+    width: 256px;
+    height: 256px;
+
+    translate: 0 -10vh;
+}
+
+.main > button, .main > input {
+    flex-grow: 1;
+    
+    border-radius: 16px;
+}
+
+.main > button {
+    border: none;
+
+    color: black;
+    background-color: rgba(255, 255, 255, 0.315);
+
+    transition: background-color 0.2s, scale 0.2s;
+}
+
+.main > button:hover {
+    cursor: pointer;
+
+    background-color: white;
+}
+
+.main > button:active {
+    scale: 0.9;
+}
+
+.main > input {
+    padding-left: 16px;
+    
+    border: solid var(--border-color) var(--border-width);
+    
+    color: var(--text-color);
+    background-color: transparent;
+
+    transition: color 0.2s ease, border-color 0.2s;
+}
+
+.main > input:focus {
+    border-color: var(--text-color);
+    outline: none;
+}
+.main > input::placeholder {
+    transition: color 0.1s;
+    color: rgb(255, 255, 255, 0.2);
+}
+
+.main > input:focus::placeholder {
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+#message {
+    position: absolute;
+
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 328px;
+
+    bottom: 24%;
+    left: 50%;
+    translate: -50% 100%;
+
+    overflow: visible;
+}
+
+@keyframes message-appear {
+    from { color: transparent }
+    to { color: var(--text-color); }
+}

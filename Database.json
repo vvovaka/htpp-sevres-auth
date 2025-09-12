@@ -6,9 +6,15 @@
     "password": "$2b$10$Znf7Gq4bbOPDOMxHtRM.BOh8uY2vJWJvDBpuEA0DAPBTlTyfbZdry"
   },
   "843c2008-d0e7-4d76-b362-dd73870660d9": {
-    "username": """,
+    "username": "a",
     "uuid": "843c2008-d0e7-4d76-b362-dd73870660d9",
     "permissions": {},
     "password": "$2b$10$iifyM939sS09kZgRa0I6KOzq3FHgPUTPSSeGYtxPAYpeqAfgzEoX2"
+  },
+  "00e65665-405f-4ae4-9570-d567e2e03189": {
+    "username": "123",
+    "uuid": "00e65665-405f-4ae4-9570-d567e2e03189",
+    "permission": {},
+    "password": "$2b$10$6oChLhKOHeQkNhZzsgZ3buv6XjwhpRnMABYYDBCqRY2qVyIYPFWYq"
   }
 }

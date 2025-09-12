@@ -1,5 +1,6 @@
 :root {
     --text-color: white;
+    --unfocused-text-color: rgba(255, 255, 255, 0.774);
     --background: rgba(0, 0, 0, 0.5);
     --border-color: rgb(255, 255, 255, 0.15);
     --border-width: 2px;
@@ -18,7 +19,7 @@ body {
     left: 0;
     right: 0;
 
-    background-image: url(bg.jpg);
+    background-image: url(https://w.wallhaven.cc/full/j3/wallhaven-j31z6w.jpg);
     background-size: cover;
     background-position: center;
 
@@ -72,9 +73,9 @@ header a.bxl:hover {
     transform: scale(1.2);
 }
 
-#main {
+.main {
     position: absolute;
-    padding: 20px;
+    padding: 32px;
 
     color: var(--text-color);
 
@@ -88,6 +89,6 @@ header a.bxl:hover {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
 
-    border-radius: 32px;
+    border-radius: 48px;
     border: solid var(--border-color) var(--border-width);
 }
