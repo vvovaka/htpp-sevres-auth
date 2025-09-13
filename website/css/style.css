@@ -53,9 +53,8 @@ header a {
 }
 
 #social-networks {
-    display: grid;
+    display: flex;
 
-    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
 
 }
