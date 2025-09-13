@@ -1,4 +1,5 @@
 .main {
+    box-sizing: content-box;
     display: flex;
 
     flex-direction: column;
@@ -9,6 +10,8 @@
     height: 256px;
 
     translate: 0 -10vh;
+
+    animation: frame-appear .5s cubic-bezier(.75,0,.25,1);
 }
 
 .main > button, .main > input {
@@ -76,7 +79,41 @@
     overflow: visible;
 }
 
-@keyframes message-appear {
-    from { color: transparent }
-    to { color: var(--text-color); }
+.main > *:nth-child(1) {
+    opacity: 0;
+
+    animation: show 1s 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.main > *:nth-child(2) {
+    opacity: 0;
+
+    animation: show 1s 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.main > *:nth-child(3) {
+    opacity: 0;
+
+    animation: show 1s 0.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes frame-appear {
+    from {
+        height: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+    to {
+        height: 256px;
+        border-radius: 48px;
+        padding: 32px;
+    }
+}
+
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

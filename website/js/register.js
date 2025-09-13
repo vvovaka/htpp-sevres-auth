@@ -16,6 +16,6 @@ async function register() {
         return response.text()
     }).then((msg) => {
         messageField.textContent = msg;
-        messageField.style.animation = "message-appear 0.2s";
+        messageField.style.animation = "show 0.2s";
     });
 }
