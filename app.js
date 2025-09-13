@@ -10,7 +10,7 @@ const FILE = "Database.json";
 const ADMIN_PASSWORD_HASH = "$2a$10$ju6z.qrJSCvMpDsozDwxwOqWdbz8Wt4SCEs/v3tTOG06wAL6mHcoC"; // сюда вставь bcrypt-хэш пароля админа
 
 const REGISTER_NICKNAME_REGEX = /^[a-zA-Z0-9_]{3,16}$/;
-const DB_UPDATE_CMD = "python script_name.py"; // Команда, которая запускается при изменениях базы данных пользователей
+const DB_UPDATE_CMD = "echo test"; // Команда, которая запускается при изменениях базы данных пользователей
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -46,7 +46,9 @@ async function add_user(name, password) {
 
   writeJson(users);
   exec(DB_UPDATE_CMD, (error) => {
-    throw new Error(`Скрипт для обновления базы данных пользователей разьебалась(завершилась неудачно).\nДайте разработчику пизды(исправьте проблему в скрипте\nКоманда запуска скрипта: ${error.cmd}\nКод выхода скрипта: ${error.code}`);
+    if (error !== null) {
+      throw new Error(`Скрипт для обновления базы данных пользователей разьебалась(завершилась неудачно).\nДайте разработчику пизды(исправьте проблему в скрипте\nКоманда запуска скрипта: ${error.cmd}\nКод выхода скрипта: ${error.code}`);
+    }
   });
 
   return true;
