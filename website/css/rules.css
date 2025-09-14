@@ -1,0 +1,29 @@
+.main {
+    height: auto;
+    overflow: hidden;
+
+    translate: 0 -40%;
+
+    animation: main-appear 1s cubic-bezier(.75,0,.25,1);
+}
+
+#rules-container {
+    text-align: left;
+}
+
+ul {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-indent: 0;
+}
+
+@keyframes main-appear {
+    from {
+        height: 0;
+        padding: 0 32px;
+    }
+    to {
+        height: 586px;
+        padding: 32px 32px;
+    }
+}
