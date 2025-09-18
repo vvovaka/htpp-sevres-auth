@@ -1,0 +1,37 @@
+.main {
+    height: unset;
+
+    animation: main-appear 1s;
+}
+
+.title {
+    margin-top: 0;
+
+    opacity: 0;
+    animation: show .5s .3s forwards;
+}
+
+.content {
+    margin-bottom: 0;
+
+    font-weight: lighter;
+    
+    opacity: 0;
+    animation: show .8s .8s forwards;
+}
+
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes main-appear {
+    from {
+        height: 0;
+        padding: 0 32px;
+    }
+    to {
+        height: 192px;
+        padding: 32px 32px;
+    }
+}
