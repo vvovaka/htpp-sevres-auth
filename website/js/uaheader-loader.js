@@ -4,7 +4,7 @@
 // ----------------------------------------------------------------------
 // -DZZc0rd- 14.09.2025
 
-fetch("modules/header.html")
+fetch("modules/uaheader.html")
     .then((response) => response.text())
     .then((text) => {
         document.body.innerHTML += text;
